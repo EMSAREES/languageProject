@@ -16,30 +16,7 @@ Asegúrate de tener instalado lo siguiente antes de empezar:
 Usa NPM o Yarn para instalar las dependencias necesarias:
 
 
-Crear el archivo .env
-En la raíz del proyecto, crea un archivo .env con el siguiente contenido (reemplaza los valores según sea necesario):
-
-env
-Copy
-Edit
-DB_HOST=localhost
-DB_USER=root
-DB_PASSWORD=TU_CONTRASEÑA
-DB_NAME=lenguagedb
-DB_PORT=3306
-
-GOOGLE_API_KEY=TU_CLAVE_API_GOOGLE
-
-EMAIL_HOST=smtp.gmail.com
-EMAIL_PORT=587
-EMAIL_USER=TU_EMAIL
-EMAIL_PASS=TU_CONTRASEÑA_EMAIL
-EMAIL_FROM=TU_EMAIL
-
-JWT_SECRET=TU_CLAVE_SECRETA_JWT
-
-SERVER_URL=http://localhost:3000
-Dependencias
+## Dependencias
 El proyecto utiliza las siguientes dependencias:
 
 @google/generative-ai: Biblioteca para interactuar con la API de Google AI.
@@ -77,3 +54,27 @@ passport: Middleware de autenticación para Node.js.
 passport-google-oauth20: Estrategia de autenticación de Google para Passport.
 
 ts-node-dev: Herramienta de desarrollo para Node.js con soporte de TypeScript.
+
+##  Crear el archivo .env
+En la raíz del proyecto, crea un archivo .env con el siguiente contenido (reemplaza los valores según sea necesario):
+
+env
+Copy
+Edit
+DB_HOST=localhost
+DB_USER=root
+DB_PASSWORD=TU_CONTRASEÑA
+DB_NAME=lenguagedb
+DB_PORT=3306
+
+GOOGLE_API_KEY=TU_CLAVE_API_GOOGLE
+
+EMAIL_HOST=smtp.gmail.com
+EMAIL_PORT=587
+EMAIL_USER=TU_EMAIL
+EMAIL_PASS=TU_CONTRASEÑA_EMAIL
+EMAIL_FROM=TU_EMAIL
+
+JWT_SECRET=TU_CLAVE_SECRETA_JWT
+
+SERVER_URL=http://localhost:3000
