@@ -1,112 +1,288 @@
-🚀 Language Project (En Desarrollo)
+<div align="center">
 
-Language Project es una aplicación desarrollada con Node.js que incluye autenticación, gestión de usuarios y diversas integraciones, como la API de Google y el manejo de correos electrónicos. Este proyecto está pensado para servir como base robusta para aplicaciones web con funcionalidades modernas y seguras.
+# 🚀 Language Project
 
-💡 Estado: En desarrollo
+<img src="https://img.shields.io/badge/status-en%20desarrollo-orange?style=for-the-badge&logo=construction&logoColor=white" alt="Estado">
+<img src="https://img.shields.io/badge/Node.js-43853D?style=for-the-badge&logo=node.js&logoColor=white" alt="Node.js">
+<img src="https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white" alt="TypeScript">
+<img src="https://img.shields.io/badge/MySQL-00000F?style=for-the-badge&logo=mysql&logoColor=white" alt="MySQL">
 
-🛠 Características principales
+### Una aplicación web moderna con autenticación, gestión de usuarios y múltiples integraciones
 
-🔑 Autenticación de usuarios con JWT y Passport
+*Construida con Node.js, pensada como base para proyectos que requieren seguridad, notificaciones y automatización de tareas*
 
-📧 Envío de correos electrónicos mediante Nodemailer
+---
 
-🌐 Integración con API de Google y OpenAI
+</div>
 
-🗂 Gestión de archivos con Multer
+## ✨ Características Principales
 
-⏰ Tareas programadas usando Node-Cron
+<table>
+<tr>
+<td width="50%">
 
-🛡️ Seguridad en contraseñas con bcrypt / bcryptjs
+### 🔐 **Seguridad & Autenticación**
+- 🔑 Autenticación JWT segura
+- 🛡️ Encriptación con bcrypt/bcryptjs  
+- 🔒 Estrategias Passport integradas
+- 🌐 OAuth 2.0 con Google
 
-⚡ Registro de solicitudes HTTP con Morgan
+</td>
+<td width="50%">
 
-🌎 Configuración de CORS con cors
+### ⚡ **Comunicación & APIs**
+- 📧 Sistema de correos con Nodemailer
+- 🤖 Integración Google Generative AI
+- 🧠 Conectividad con OpenAI
+- 🌍 CORS configurado
 
-📦 Requisitos previos
+</td>
+</tr>
+<tr>
+<td width="50%">
 
-Antes de empezar, asegúrate de tener instalado:
+### 📁 **Gestión de Datos**
+- 🗂️ Manejo de archivos con Multer
+- 🗄️ Base de datos MySQL2
+- 📊 Logging avanzado con Morgan
+- ⚙️ Variables de entorno seguras
 
-Node.js (v16.x o superior)
+</td>
+<td width="50%">
 
-NPM (incluido con Node.js) o Yarn
+### 🔄 **Automatización**
+- ⏰ Tareas programadas con Node-Cron
+- 🚀 Desarrollo ágil con ts-node-dev
+- 📈 Escalabilidad modular
+- 🛠️ TypeScript para desarrollo
 
-MySQL (como base de datos)
+</td>
+</tr>
+</table>
 
-Git (para manejo de repositorios)
+---
 
-⚙️ Instalación de dependencias
+## 📋 Requisitos Previos
 
-En la raíz del proyecto, ejecuta:
+> **Antes de comenzar, asegúrate de tener instalado:**
 
-npm install o yarn install
+| Herramienta | Versión | Descripción |
+|-------------|---------|-------------|
+| ![Node.js](https://img.shields.io/badge/Node.js-339933?style=flat&logo=node.js&logoColor=white) | `v16.x+` | Runtime de JavaScript |
+| ![NPM](https://img.shields.io/badge/NPM-CB3837?style=flat&logo=npm&logoColor=white) | `Latest` | Gestor de paquetes |
+| ![MySQL](https://img.shields.io/badge/MySQL-4479A1?style=flat&logo=mysql&logoColor=white) | `8.0+` | Sistema de base de datos |
+| ![Git](https://img.shields.io/badge/Git-F05032?style=flat&logo=git&logoColor=white) | `Latest` | Control de versiones |
 
-📚 Dependencias principales
+---
 
-@google/generative-ai – Interacción con la API de Google AI
+## 🚀 Instalación Rápida
 
-@types/node-cron – Tipos TypeScript para cron
+### 1️⃣ **Clonar el repositorio**
+```bash
+git clone https://github.com/EMSAREES/languageProject.git
+cd languageProject
+```
 
-bcrypt / bcryptjs – Encriptación de contraseñas
+### 2️⃣ **Instalar dependencias**
+```bash
+# Con NPM
+npm install
 
-cors – Middleware para CORS
+# Con Yarn
+yarn install
+```
 
-dotenv – Variables de entorno
+### 3️⃣ **Configurar variables de entorno**
+Crea un archivo `.env` en la raíz del proyecto (ver sección de configuración)
 
-express – Framework web
+### 4️⃣ **Iniciar en modo desarrollo**
+```bash
+npm run dev
+# o
+yarn dev
+```
 
-google-auth-library – Autenticación de Google
+🎉 **¡Listo!** Tu aplicación estará disponible en `http://localhost:3000`
 
-jsonwebtoken – Tokens JWT
+---
 
-morgan – Registro de solicitudes HTTP
+## ⚙️ Configuración del Archivo `.env`
 
-multer – Manejo de archivos
+<details>
+<summary><strong>📝 Plantilla completa del archivo .env</strong></summary>
 
-mysql2 – Cliente MySQL
-
-node-cron – Tareas programadas
-
-nodemailer – Envío de correos electrónicos
-
-openai – Integración con OpenAI
-
-passport – Autenticación
-
-passport-google-oauth20 – Estrategia de Google para Passport
-
-ts-node-dev – Desarrollo con TypeScript y Node.js
-
-⚙️ Configuración del archivo .env
-
-En la raíz del proyecto, crea un archivo .env con el siguiente contenido y reemplaza los valores según sea necesario:
-
-# Base de datos
+```bash
+# 🗄️ CONFIGURACIÓN DE BASE DE DATOS
 DB_HOST=localhost
 DB_USER=root
 DB_PASSWORD=TU_CONTRASEÑA
 DB_NAME=lenguagedb
 DB_PORT=3306
 
-# API de Google
+# 🔑 APIS EXTERNAS
 GOOGLE_API_KEY=TU_CLAVE_API_GOOGLE
 
-# Correo electrónico
+# 📧 CONFIGURACIÓN DE EMAIL
 EMAIL_HOST=smtp.gmail.com
 EMAIL_PORT=587
 EMAIL_USER=TU_EMAIL
 EMAIL_PASS=TU_CONTRASEÑA_EMAIL
 EMAIL_FROM=TU_EMAIL
 
-# JWT
+# 🔐 SEGURIDAD
 JWT_SECRET=TU_CLAVE_SECRETA_JWT
 
-# URL del servidor
+# 🌐 SERVIDOR
 SERVER_URL=http://localhost:3000
+```
 
-🚀 Ejecución del proyecto
+</details>
 
-Para iniciar la aplicación en modo desarrollo:
+### 📋 **Descripción de Variables**
 
-npm run dev  o  yarn dev
+| Variable | Descripción | Ejemplo |
+|----------|-------------|---------|
+| `DB_HOST` | Servidor MySQL | `localhost` |
+| `DB_USER` | Usuario de BD | `root` |
+| `DB_PASSWORD` | Contraseña BD | `mi_password_123` |
+| `GOOGLE_API_KEY` | API Key de Google | `AIza...` |
+| `EMAIL_USER` | Email para envíos | `mi-app@gmail.com` |
+| `JWT_SECRET` | Clave secreta JWT | `mi_clave_super_secreta` |
 
-El servidor estará disponible en http://localhost:3000.
+> ⚠️ **Importante:** Nunca subas tu archivo `.env` al repositorio. Está incluido en `.gitignore`
+
+---
+
+## 📦 Stack Tecnológico
+
+<div align="center">
+
+### **Backend & Framework**
+![Express.js](https://img.shields.io/badge/Express.js-404D59?style=for-the-badge)
+![Node.js](https://img.shields.io/badge/Node.js-43853D?style=for-the-badge&logo=node.js&logoColor=white)
+![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)
+
+### **Base de Datos**
+![MySQL](https://img.shields.io/badge/MySQL-00000F?style=for-the-badge&logo=mysql&logoColor=white)
+
+### **Autenticación & Seguridad**
+![JWT](https://img.shields.io/badge/JWT-black?style=for-the-badge&logo=JSON%20web%20tokens)
+![Passport](https://img.shields.io/badge/Passport-34E27A?style=for-the-badge&logo=passport&logoColor=white)
+
+### **APIs & Integraciones**
+![Google](https://img.shields.io/badge/Google%20API-4285F4?style=for-the-badge&logo=google&logoColor=white)
+![OpenAI](https://img.shields.io/badge/OpenAI-412991?style=for-the-badge&logo=openai&logoColor=white)
+
+</div>
+
+---
+
+## 🗂️ Dependencias Principales
+
+<details>
+<summary><strong>🔍 Ver lista completa de dependencias</strong></summary>
+
+### **🧠 IA & APIs**
+- `@google/generative-ai` - API de Google AI
+- `openai` - Integración con OpenAI
+- `google-auth-library` - Autenticación Google
+
+### **🔐 Autenticación & Seguridad**
+- `jsonwebtoken` - Tokens JWT
+- `passport` - Framework de autenticación
+- `passport-google-oauth20` - OAuth Google
+- `bcrypt` / `bcryptjs` - Encriptación de contraseñas
+
+### **🌐 Servidor & Comunicación**
+- `express` - Framework web
+- `cors` - Control de CORS
+- `morgan` - Logging HTTP
+- `nodemailer` - Envío de emails
+
+### **📁 Datos & Archivos**
+- `mysql2` - Cliente MySQL
+- `multer` - Manejo de archivos
+- `dotenv` - Variables de entorno
+
+### **⏰ Tareas & Desarrollo**
+- `node-cron` - Tareas programadas
+- `ts-node-dev` - Desarrollo TypeScript
+- `@types/node-cron` - Tipos TypeScript
+
+</details>
+
+---
+
+## 🛠️ Scripts Disponibles
+
+```bash
+# 🚀 Desarrollo
+npm run dev          # Inicia servidor en modo desarrollo
+
+# 🏗️ Construcción
+npm run build        # Compila TypeScript a JavaScript
+
+# ▶️ Producción
+npm start           # Inicia servidor en producción
+
+# 🧪 Testing
+npm test            # Ejecuta pruebas (si están configuradas)
+```
+
+---
+
+## 📁 Estructura del Proyecto
+
+```
+languageProject/
+├── 📂 src/
+│   ├── 📂 controllers/     # Controladores de rutas
+│   ├── 📂 models/          # Modelos de datos
+│   ├── 📂 routes/          # Definición de rutas
+│   ├── 📂 middleware/      # Middleware personalizado
+│   ├── 📂 services/        # Lógica de negocio
+│   └── 📂 utils/           # Utilidades y helpers
+├── 📂 uploads/             # Archivos subidos
+├── 📄 .env                 # Variables de entorno
+├── 📄 package.json         # Configuración NPM
+└── 📄 README.md           # Este archivo
+```
+
+---
+
+## 🚀 Roadmap de Desarrollo
+
+- [x] ✅ Autenticación JWT
+- [x] ✅ Integración Google OAuth
+- [x] ✅ Sistema de correos
+- [x] ✅ Manejo de archivos
+- [ ] 🔄 Panel de administración
+- [ ] 🔄 API REST completa
+- [ ] 🔄 Tests automatizados
+- [ ] 🔄 Documentación Swagger
+
+---
+
+## 🤝 Contribución
+
+¿Quieres contribuir? ¡Genial! 
+
+1. Haz un fork del proyecto
+2. Crea una rama para tu feature (`git checkout -b feature/nueva-caracteristica`)
+3. Commit tus cambios (`git commit -m 'Añade nueva característica'`)
+4. Push a la rama (`git push origin feature/nueva-caracteristica`)
+5. Abre un Pull Request
+
+---
+
+## 📄 Licencia
+
+Este proyecto está bajo la Licencia MIT - mira el archivo [LICENSE](LICENSE) para más detalles.
+
+---
+
+
+
+<sub>🚀 **Language Project** - Construyendo el futuro de las aplicaciones web</sub>
+
+</div>
