@@ -38,9 +38,7 @@ Git (para manejo de repositorios)
 
 En la raíz del proyecto, ejecuta:
 
-npm install
-# o
-yarn install
+npm install o yarn install
 
 📚 Dependencias principales
 
@@ -109,9 +107,6 @@ SERVER_URL=http://localhost:3000
 
 Para iniciar la aplicación en modo desarrollo:
 
-npm run dev
-# o
-yarn dev
-
+npm run dev  o  yarn dev
 
 El servidor estará disponible en http://localhost:3000.
